@@ -72,7 +72,7 @@ const PinDetail = ({ user }) => {
           </div>
           <div className="w-full p-5 flex-1 xl:min-w-620">
             <div className="flex items-center justify-between">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center mr-3">
                 <a
                   href={`${pinDetail.image.asset.url}?dl=`}
                   download
@@ -81,12 +81,12 @@ const PinDetail = ({ user }) => {
                   <MdDownloadForOffline />
                 </a>
               </div>
-              <a href={pinDetail.destination} target="_blank" rel="noreferrer">
+              <a href={pinDetail.destination} target="_blank" rel="noreferrer" className='text-red-500 truncate'>
                 {pinDetail.destination?.slice(8)}
               </a>
             </div>
             <div>
-              <h1 className="text-4xl font-bold break-words mt-3">
+              <h1 className="md:text-4xl font-bold break-words mt-3 text-2xl">
                 {pinDetail.title}
               </h1>
               <p className="mt-3">{pinDetail.about}</p>
