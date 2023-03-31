@@ -22,7 +22,6 @@ const CreatePin = ({ user }) => {
     const selectedFile = e.target.files[0];
     // uploading asset to sanity
     if ( selectedFile.type === 'image/png' || selectedFile.type === 'image/svg' || selectedFile.type === 'image/jpeg' || selectedFile.type === 'image/gif' || selectedFile.type === 'image/tiff' || selectedFile.type === 'image/webp') {
-      setWrongImageType(false);
       setLoading(true);
       client.assets
         .upload('image', selectedFile, { contentType: selectedFile.type, filename: selectedFile.name })
