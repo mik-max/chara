@@ -66,7 +66,7 @@ const CreatePin = ({ user }) => {
       };
       client.create(doc).then(() => {
           Swal.fire({
-               icon: 'Success',
+               icon: 'success',
                title: 'Created!',
                text: 'Your pin has been created! 🚀🚀',
           })
